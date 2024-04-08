@@ -26,23 +26,11 @@ driver = webdriver.Firefox(service=service, options=options)
 # options = webdriver.ChromeOptions()
 # driver = webdriver.Chrome(service=service, options=options)
 
-# Try to add extension:
 system_extension_path = env.str("EXTENSION_PATH")
-# options.add_extension((system_extension_path))
 
 url = "http://duma.gov.ru/contacts/feedback/"
 # Another URL:
 # url = "http://www.gks.ru/"
-
-# Maby not needed:
-# my_timeouts = Timeouts()
-# my_timeouts.implicit_wait = 10
-# driver.timeouts = my_timeouts
-
-# Previous version selenium:
-# river_path = "D:\\Downloads\\chromedriver_win32\\chromedriver.exe"
-# driver = webdriver.Chrome(executable_path=driver_path)
-# driver.get("http://duma.gov.ru/contacts/feedback/")
 
 
 send_mail = 0
@@ -73,5 +61,3 @@ while True:
 
         send_mail += 1
         print(send_mail)
-
-    # driver.quit()
